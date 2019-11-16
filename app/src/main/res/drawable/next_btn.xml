@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按壓時 -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:left="2dp" android:top="2dp">
+                <shape>
+                    <corners android:radius="10dp" />
+                    <solid android:color="#706060"/>
+                </shape>
+            </item>
+            <item android:top="2dp" android:left="2dp">
+                <shape>
+                    <corners android:radius="10dp" />
+                    <solid android:color="#881E3C"/>
+                    <padding android:top="10dp"
+                        android:right="10dp"
+                        android:bottom="10dp"
+                        android:left="10dp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- 預設時 -->
+    <item>
+        <layer-list>
+            <item android:left="2dp" android:top="2dp">
+                <shape>
+                    <corners android:radius="10dp" />
+                    <solid android:color="#534D4D"/>
+                </shape>
+            </item>
+            <item android:bottom="1dp" android:right="1dp">
+                <shape>
+                    <corners android:radius="10dp" />
+                    <solid android:color="#881e1e"/>
+                    <padding android:top="10dp"
+                        android:right="10dp"
+                        android:bottom="10dp"
+                        android:left="10dp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

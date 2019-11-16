@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirmMainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="新增帳號 >"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/signup_top_tag"
+                android:padding="2dp"
+                android:text="新增活動  >"
+                android:textColor="#FAFAFA"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="2dp"
+                android:text="新增商品 >"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="2dp"
+                android:text=" 登入"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/activity_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="活動名稱"
+            android:inputType="textPersonName"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/activity_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="活動單筆支付金額"
+            android:inputType="textPersonName"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/activity_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="地點"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/activity_textarea"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="活動內容"
+            android:inputType="textMultiLine"
+            android:padding="15dp"
+            android:scrollbars="vertical"
+            android:isScrollContainer="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/lastbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/back_btn"
+                android:minHeight="0dp"
+                android:text="上一步"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/nextbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/next_btn"
+                android:minHeight="0dp"
+                android:text="下一步"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

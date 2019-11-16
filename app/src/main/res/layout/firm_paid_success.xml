@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".FirmSellSuccess"
+    android:background="#d5e1e1"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/paid_success_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#48a9a5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/paid_success_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:letterSpacing="0.5"
+                android:text="交易完成"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <FrameLayout
+            android:id="@+id/paid_success_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paid_success_toolbar"
+            app:layout_constraintVertical_bias="0.26999998">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/paid_success_card_inside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/paid_money_insidecard"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                app:contentPadding="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:cardPreventCornerOverlap="false">
+
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:columnCount="2"
+                    android:orientation="vertical"
+                    android:rowCount="4">
+
+                    <TextView
+                        android:id="@+id/m_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_columnSpan="2"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="會員名稱"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_margin="15dp"
+                        android:text="活動名稱: "
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="2"
+                        android:layout_column="0"
+                        android:layout_margin="15dp"
+                        android:text="時間:"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="3"
+                        android:layout_column="0"
+                        android:layout_margin="15dp"
+                        android:text="價格:"
+                        android:textColor="#cc0000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/a_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:layout_margin="15dp"
+                        android:text="XXXX"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="2"
+                        android:layout_column="1"
+                        android:layout_margin="15dp"
+                        android:text="0000/00/00"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/c_transaction_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="3"
+                        android:layout_column="1"
+                        android:layout_margin="15dp"
+                        android:text="-$100"
+                        android:textColor="#cc0000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </GridLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageView
+                android:id="@+id/member_circle_pic"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center|top"
+                android:elevation="6dp"
+                android:background="@drawable/pic_round"
+                android:scaleType="centerInside" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/next_btn"
+            android:text="回主介面"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paid_success_card" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

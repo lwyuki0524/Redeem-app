@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirmMainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:text="廠商登入"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="15dp"
+            android:columnCount="2"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            android:rowCount="2"
+            android:useDefaultMargins="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginRight="10dp"
+                android:text="帳號 :"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_marginRight="10dp"
+                android:text="密碼 :"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_marginBottom="35dp"
+                android:ems="10"
+                android:hint="*必填"
+                android:inputType="text"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="*必填"
+                android:inputType="textPassword"
+                android:textSize="14sp" />
+        </GridLayout>
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/next_btn"
+            android:minHeight="0dp"
+            android:text="確認"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

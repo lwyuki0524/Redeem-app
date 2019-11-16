@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirmMainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/firm_add_activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#48a9a5"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:navigationIcon="@drawable/ic_back"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/paid_success_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:letterSpacing="0.5"
+                android:text="新增活動"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="32dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firm_add_activity_toolbar">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="活動名稱"
+                android:inputType="textPersonName"
+                android:textSize="18sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="活動單筆支付金額"
+                android:inputType="textPersonName"
+                android:textSize="18sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="地點"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/textarea"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="活動內容"
+                android:inputType="textMultiLine"
+                android:isScrollContainer="true"
+                android:padding="15dp"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cancelbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/back_btn"
+                    android:minHeight="0dp"
+                    android:text="取消"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/confirm_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/next_btn"
+                    android:minHeight="0dp"
+                    android:text="確認"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
