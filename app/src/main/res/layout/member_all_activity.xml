@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemberAllActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/all_activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginBottom="30dp"
+            android:background="#48a9a5"
+            app:navigationIcon="@drawable/ic_back"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:letterSpacing="0.5"
+                android:text="活動總覽"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/all_activity_toolbar"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp">
+            <LinearLayout
+                android:id="@+id/nodata_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="gone">
+            </LinearLayout>
+
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay"-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/all_activity_btn"-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/content_main_white_title"-->
+<!--                android:elevation="2dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone"-->
+<!--                tools:visibility="gone">-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:elevation="10dp"-->
+<!--                    android:gravity="start|center_vertical"-->
+<!--                    android:letterSpacing="0.3"-->
+<!--                    android:paddingStart="15dp"-->
+<!--                    android:paddingTop="5dp"-->
+<!--                    android:paddingEnd="15dp"-->
+<!--                    android:text="xxx公司"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    tools:visibility="visible" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="活動名稱：xxx"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textSize="24sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    tools:visibility="visible" />-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:elevation="10dp"-->
+<!--                    android:gravity="start|center_vertical"-->
+<!--                    android:letterSpacing="0.3"-->
+<!--                    android:paddingStart="15dp"-->
+<!--                    android:paddingEnd="15dp"-->
+<!--                    android:text="地點：xxx"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    tools:visibility="visible" />-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:background="@drawable/content_main_bluecard_end"-->
+<!--                    android:elevation="10dp"-->
+<!--                    android:gravity="right|center_vertical"-->
+<!--                    android:letterSpacing="0.3"-->
+<!--                    android:paddingStart="15dp"-->
+<!--                    android:paddingEnd="15dp"-->
+<!--                    android:text="點擊查看>>"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    tools:visibility="visible" />-->
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/next_btn"
+            android:minHeight="0dp"
+            android:text="回主介面"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -64,13 +64,29 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="5dp"
-            app:srcCompat="@drawable/pic_coffee" />
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:id="@+id/commodity_pic_base"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/pic_coffee" />
+
+            <ImageView
+                android:id="@+id/commodity_pic"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"/>
+
+        </RelativeLayout>
+
+
 
         <EditText
             android:id="@+id/commodity_name"

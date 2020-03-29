@@ -11,7 +11,7 @@ public class MysqlInfo {
     // 資料庫定義
     String mysql_ip = "140.135.113.178";
     int mysql_port = 3307;
-    String db_name = "sa";
+    String db_name = "sa_project";
     String url = "jdbc:mysql://" + mysql_ip + ":" + mysql_port + "/" + db_name + "?useSSL=false";
     String db_user = "sa11";
     String db_password = "sasasa11";

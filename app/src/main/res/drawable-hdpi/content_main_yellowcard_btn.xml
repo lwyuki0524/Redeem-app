@@ -16,7 +16,7 @@
                     <solid android:color="#3A3737" />
                 </shape>
             </item>
-            <item android:top="2dp" android:left="2dp">
+            <item android:top="1.5dp" android:left="1.5dp">
                 <shape>
                     <gradient android:angle="270"
                         android:endColor="#817cc3" android:startColor="#817cc3" />

@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".FirmActivityItem">
 
-    <com.google.android.material.appbar.AppBarLayout
+   <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppBarOverlay">
+        android:theme="@style/AppBarOverlay"
+        >
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -20,7 +21,23 @@
             app:navigationIcon="@drawable/ic_back" />
 
     </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/firm_activity_item_content"/>
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/PopupOverlay"
+            app:navigationIcon="@drawable/ic_back" />
 
-    <include layout="@layout/firm_activity_item_content" />
+        <include layout="@layout/firm_activity_item_content"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_below="@id/toolbar"/>
+    </RelativeLayout>-->
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

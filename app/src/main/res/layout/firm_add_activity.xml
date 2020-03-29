@@ -45,36 +45,49 @@
 
 
             <EditText
+                android:id="@+id/act_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:ems="10"
                 android:hint="活動名稱"
-                android:inputType="textPersonName"
+                android:inputType="text"
                 android:textSize="18sp" />
 
             <EditText
+                android:id="@+id/act_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:ems="10"
                 android:hint="活動單筆支付金額"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:textSize="18sp" />
 
             <EditText
+                android:id="@+id/act_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:ems="10"
                 android:hint="地點"
-                android:inputType="textPersonName" />
+                android:inputType="text" />
 
             <EditText
-                android:id="@+id/textarea"
+                android:id="@+id/act_maxPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="活動限制人數"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/act_content"
                 android:layout_width="300dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"

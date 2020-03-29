@@ -69,6 +69,7 @@ public class FirmLogin extends AppCompatActivity {
                                             Intent intent = new Intent();
                                             intent.setClass(FirmLogin.this, FirmMainActivity.class);
                                             startActivity(intent);
+                                            finish();
                                         }
                                     });
                                     Log.v("DB", "成功登入");

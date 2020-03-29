@@ -26,8 +26,7 @@ public class MemberReceivedMoney extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MemberReceivedMoney.this, MemberMainActivity.class));
-
+//                startActivity(new Intent(MemberReceivedMoney.this, MemberMainActivity.class));
                 finish();//刪除此activity
             }
         });
@@ -37,11 +36,13 @@ public class MemberReceivedMoney extends AppCompatActivity {
         ImageView image_view = (ImageView) findViewById(R.id.imageView);
         BarcodeEncoder encoder = new BarcodeEncoder();
 
-        final String account = getSharedPreferences("record", MODE_PRIVATE)
-                .getString("account", "");
+        String memberID = getSharedPreferences("record", MODE_PRIVATE)
+                .getString("memberID", "");
+
+        final String qrcode_content = "M" + memberID ;
 
         try {
-            Bitmap bit = encoder.encodeBitmap(account, BarcodeFormat.QR_CODE,
+            Bitmap bit = encoder.encodeBitmap(qrcode_content, BarcodeFormat.QR_CODE,
                     250, 250);
             image_view.setImageBitmap(bit);
         } catch (WriterException e) {

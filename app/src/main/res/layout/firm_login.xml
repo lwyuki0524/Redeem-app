@@ -9,9 +9,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:focusable="true"
-        android:focusableInTouchMode="true">
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -55,33 +55,47 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/account"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
                 android:layout_column="1"
                 android:layout_marginBottom="35dp"
-                android:ems="10"
-                android:hint="*必填"
-                android:inputType="text"
-                android:textSize="14sp" />
+                android:hint="*必填">
 
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_row="1"
                 android:layout_column="1"
                 android:layout_marginBottom="10dp"
-                android:ems="10"
                 android:hint="*必填"
-                android:inputType="textPassword"
-                android:textSize="14sp" />
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:inputType="textPassword"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
         </GridLayout>
+
         <Button
             android:id="@+id/loginbtn"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="5dp"
@@ -89,7 +103,8 @@
             android:background="@drawable/next_btn"
             android:minHeight="0dp"
             android:text="確認"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

@@ -69,6 +69,7 @@
                     android:id="@+id/imageView"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="50dp"
                     app:srcCompat="@android:drawable/screen_background_dark_transparent" />
 

@@ -1,397 +1,375 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="5dp"
-    android:paddingRight="5dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MemberMainActivity"
     tools:showIn="@layout/member_main_app_bar">
 
-
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="30dp"
-        android:orientation="vertical">
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:paddingBottom="10sp">
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
-                android:background="#00000000"
-                android:scaleType="centerInside"
-                android:src="@drawable/pic_coffee" />
-
-            <GridLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginRight="15dp"
-                android:padding="10sp">
-
-                <TextView
-                    android:id="@+id/member_nickname"
-                    android:layout_width="152dp"
-                    android:layout_row="0"
-                    android:layout_column="0"
-                    android:layout_columnSpan="2"
-                    android:padding="5sp"
-                    android:text="使用者名稱"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_row="1"
-                    android:layout_column="0"
-                    android:padding="5sp"
-                    android:text="ID: "
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/member_ID"
-                    android:layout_row="1"
-                    android:layout_column="1"
-                    android:layout_gravity="end"
-                    android:padding="5sp"
-                    android:text="0001"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_row="2"
-                    android:layout_column="0"
-                    android:padding="5sp"
-                    android:text="目前金額:"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/member_money"
-                    android:layout_row="2"
-                    android:layout_column="1"
-                    android:layout_gravity="end"
-                    android:padding="5sp"
-                    android:text="$ 0"
-                    android:textSize="18sp" />
-
-            </GridLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="---幻燈片播放---"
-                android:textSize="18sp" />
-
-            <!--<LinearLayout
-                android:id="@+id/imagebtn1"
-                android:layout_width="50dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical"></LinearLayout>-->
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:padding="20dp">
-
-            <!--<LinearLayout
-                android:id="@+id/imagebtn1"
-                android:layout_width="50dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical"></LinearLayout>-->
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:layout_weight="0"
-                android:clickable="false"
-                android:orientation="vertical">
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingBottom="10sp">
 
-                <ImageButton
-                    android:id="@+id/receive_money_btn"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                <ImageView
+                    android:id="@+id/member_photo"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:layout_marginLeft="15dp"
                     android:background="#00000000"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/content_main_icon_red_envelope" />
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pic_coffee" />
 
-                <TextView
-                    android:layout_width="match_parent"
+                <GridLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:padding="10sp">
 
-                    android:text="收紅包"
-                    android:textAlignment="center"
-                    android:textColor="#cc0000"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/member_nickname"
+                        android:layout_width="152dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_columnSpan="2"
+                        android:padding="5sp"
+                        android:text="使用者名稱"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:padding="5sp"
+                        android:text="ID: "
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/member_ID"
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:layout_gravity="end"
+                        android:padding="5sp"
+                        android:text="0001"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_row="2"
+                        android:layout_column="0"
+                        android:padding="5sp"
+                        android:text="目前金額:"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/member_money"
+                        android:layout_row="2"
+                        android:layout_column="1"
+                        android:layout_gravity="end"
+                        android:padding="5sp"
+                        android:text="$ 0"
+                        android:textSize="18sp" />
+
+                </GridLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/convenientBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:canLoop="true" />
+                <!--   app:canLoop="true"  //控制循环与否-->
+
+
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:layout_weight="0"
-                android:clickable="false"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="20dp">
 
-                <ImageButton
-                    android:id="@+id/buy_goods_btn"
+                <!--<LinearLayout
+                    android:id="@+id/imagebtn1"
                     android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="#00000000"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/content_main_icon_shopping" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="買東西"
-                    android:textAlignment="center"
-                    android:textColor="#13818d"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="0"
-                android:clickable="false"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/member_account_book_btn"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-
-                    android:background="#00000000"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/content_main_icon_notepad" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="日記簿"
-                    android:textAlignment="center"
-                    android:textColor="#704b48"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="50dp"
-            android:elevation="10dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="10dp"
-            app:cardPreventCornerOverlap="false">
-
-            <!--
-            app:cardCornerRadius="?attr/dialogCornerRadius"
-
-            app:cardUseCompatPadding="true"
-            app:cardUseCompatPadding="false"-->
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/content_main_yellowcard"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <!--app:popupTheme="@style/AppTheme.PopupOverlay"-->
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/content_main_yellowcard_title"
-                    android:elevation="10dp"
-                    android:gravity="start|center_vertical"
-                    android:letterSpacing="0.3"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:text="活動推薦"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"></LinearLayout>-->
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/content_main_yellowcard_inside"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal"
-                    android:padding="20dp">
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="0"
+                    android:clickable="false"
+                    android:orientation="vertical">
 
-                    <!--<LinearLayout
-                        android:id="@+id/imagebtn1"
+                    <ImageButton
+                        android:id="@+id/receive_money_btn"
                         android:layout_width="50dp"
-                        android:layout_height="70dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:orientation="vertical"></LinearLayout>-->
+                        android:layout_height="50dp"
+                        android:background="#00000000"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/content_main_icon_red_envelope" />
 
-                    <LinearLayout
-                        android:id="@+id/paid_money_btn"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_weight="0"
-                        android:clickable="false"
-                        android:orientation="vertical">
 
-                        <ImageButton
-                            android:id="@+id/activity1"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="#00000000"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/pic_coffee" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-
-                            android:text="活動1"
-                            android:textAlignment="center"
-                            android:textColor="#000000"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_weight="0"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageButton
-                            android:id="@+id/activity2"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="#00000000"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/pic_coffee" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="活動2"
-                            android:textAlignment="center"
-                            android:textColor="#000000"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="0"
-                        android:clickable="true"
-                        android:orientation="vertical">
-
-                        <ImageButton
-                            android:id="@+id/activity3"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-
-                            android:background="#00000000"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/pic_coffee" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-
-                            android:text="活動3"
-                            android:textAlignment="center"
-                            android:textColor="#000000"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-
+                        android:text="收代幣"
+                        android:textAlignment="center"
+                        android:textColor="#cc0000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/all_activity_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/content_main_yellowcard_end"
-                    android:elevation="10dp"
-                    android:gravity="right|center_vertical"
-                    android:letterSpacing="0.3"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:text="所有活動>>"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="0"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/buy_goods_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="#00000000"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/content_main_icon_shopping" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="付代幣"
+                        android:textAlignment="center"
+                        android:textColor="#13818d"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0"
+                    android:clickable="false"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/member_account_book_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+
+                        android:background="#00000000"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/content_main_icon_notepad" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="日記簿"
+                        android:textAlignment="center"
+                        android:textColor="#704b48"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:cardPreventCornerOverlap="false">
+
+                <!--
+                app:cardCornerRadius="?attr/dialogCornerRadius"
+
+                app:cardUseCompatPadding="true"
+                app:cardUseCompatPadding="false"-->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/content_main_yellowcard"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!--app:popupTheme="@style/AppTheme.PopupOverlay"-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/content_main_yellowcard_title"
+                        android:elevation="2dp"
+                        android:gravity="start|center_vertical"
+                        android:letterSpacing="0.3"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:text="活動隨選"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                   <LinearLayout
+                       android:id="@+id/nodata_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/content_main_yellowcard_inside"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                       android:visibility="gone">
+
+                   </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/content_main_yellowcard_inside" />
+
+                    <TextView
+                        android:id="@+id/all_activity_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/content_main_yellowcard_end"
+                        android:elevation="10dp"
+                        android:gravity="right|center_vertical"
+                        android:letterSpacing="0.3"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:text="點擊查看所有活動>>"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="40dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:cardPreventCornerOverlap="false">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/content_main_pinkcard_inside"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:letterSpacing="0.3"
+                            android:text="已獲商品數量: "
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/my_goods_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="載入中..."
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="2dp"
+                            android:text="個"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/my_goods_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/content_main_pinkcard_end"
+                        android:elevation="10dp"
+                        android:gravity="right|center_vertical"
+                        android:letterSpacing="0.3"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:text="查看已獲商品>>"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

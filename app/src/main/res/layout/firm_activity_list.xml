@@ -33,6 +33,7 @@
         </androidx.appcompat.widget.Toolbar>
 
         <LinearLayout
+            android:id="@+id/activity_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="24dp"
@@ -41,8 +42,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/firm_activity_list_toolbar">
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/list_activity1"
+                android:id="@+id/nodata"
                 android:layout_width="230dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -52,6 +58,7 @@
                 android:layout_marginBottom="10dp"
                 android:elevation="3dp"
                 android:foreground="@drawable/firm_activity_list_card"
+                android:visibility="gone"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="2dp"
                 app:contentPaddingBottom="20dp"
@@ -60,6 +67,7 @@
                 app:contentPaddingTop="20dp">
 
                 <LinearLayout
+                    android:id="@+id/nodata_Linear"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
@@ -67,26 +75,27 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="活動名稱: "
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/nodata_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="XXX" />
+                        tools:text="目前無活動"
+                        tools:visibility="visible" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/add_activity_btn"
-                android:layout_width="230dp"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="50dp"
                 app:cardBackgroundColor="#f2d668"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="2dp"
@@ -94,6 +103,7 @@
                 app:contentPaddingTop="20dp">
 
                 <TextView
+                    android:id="@+id/test"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

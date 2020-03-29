@@ -43,7 +43,7 @@ public class FirmPaidMoney extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(FirmPaidMoney.this, FirmMainActivity.class));
+//                startActivity(new Intent(FirmPaidMoney.this, FirmMainActivity.class));
                 finish();//刪除此activity(可刪除)
             }
         });

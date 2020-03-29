@@ -26,8 +26,7 @@ public class FirmSellGoods extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(FirmSellGoods.this, FirmMainActivity.class));
-
+//                startActivity(new Intent(FirmSellGoods.this, FirmMainActivity.class));
                 finish();//刪除此activity
             }
         });
@@ -37,11 +36,13 @@ public class FirmSellGoods extends AppCompatActivity {
         ImageView image_view = (ImageView) findViewById(R.id.imageView);
         BarcodeEncoder encoder = new BarcodeEncoder();
 
-        final String account = getSharedPreferences("record", MODE_PRIVATE)
-                .getString("account", "");
+        String firmID = getSharedPreferences("record", MODE_PRIVATE)
+                .getString("firmID", "");
+
+        final String qrcode_content = "C" + firmID;
 
         try {
-            Bitmap bit = encoder.encodeBitmap(account, BarcodeFormat.QR_CODE,
+            Bitmap bit = encoder.encodeBitmap(qrcode_content, BarcodeFormat.QR_CODE,
                     250, 250);
             image_view.setImageBitmap(bit);
         } catch (WriterException e) {

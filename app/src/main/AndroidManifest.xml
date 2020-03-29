@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tw.sa.savirtualcurrencyapp">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -14,40 +15,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".FirmPaidProcess"></activity>
+        <activity android:name=".FirmStatistics"></activity>
+        <activity android:name=".FirmActivityModify"></activity>
+        <activity android:name=".FirmModifyPassword" />
+        <activity android:name=".FirmModifyInfo" />
+        <activity android:name=".MemberMyGoods" />
+        <activity android:name=".MemberModifyPerson" />
+        <activity android:name=".MemberModifyPassword" />
+        <activity android:name=".MemberAllActivity" />
+        <activity android:name=".MemberActivityInfo" />
+        <activity android:name=".FirmPaidProcess" />
         <activity android:name=".MemberBoughtProcess" />
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".company"
+            android:name=".MemberLogin"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".company_login"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".company_register"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".member"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".member_login"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".member_register"
+            android:name=".MemberRegister"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".MemberBoughtGoods" />
@@ -58,13 +42,7 @@
         <activity
             android:name=".MemberMainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MemberReceivedMoney" />
         <activity android:name=".FirmAccountBook" />
         <activity android:name=".FirmAddGoods" />
@@ -98,13 +76,7 @@
         <activity
             android:name=".FirmSignUp1"
             android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".FirmPaidMoney"
             android:screenOrientation="portrait" />
@@ -112,6 +84,16 @@
             android:name=".FirmMainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

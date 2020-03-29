@@ -8,7 +8,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
-        versionName "1.4"
+        versionName "1.7.8"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -25,8 +25,11 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.google.android.gms:play-services-vision:18.0.0'
     implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha03'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.karumi:dexter:6.0.0'
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }

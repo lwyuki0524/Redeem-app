@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_modify_firm_info"
             android:title="@string/menu_rewrite" />
         <!--android:icon="@drawable/ic_menu_camera"-->
 
@@ -13,6 +13,11 @@
             android:id="@+id/nav_logout"
             android:title="@string/menu_logout" />
         <!--android:icon="@drawable/ic_menu_gallery"-->
+
+        <item
+            android:id="@+id/nav_statics"
+            android:title="@string/menu_statics" />
+        <!--android:icon="@drawable/ic_menu_slideshow"-->
 
         <item
             android:id="@+id/nav_slideshow"

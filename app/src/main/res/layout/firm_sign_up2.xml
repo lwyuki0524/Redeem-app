@@ -73,7 +73,7 @@
             android:layout_margin="10dp"
             android:ems="10"
             android:hint="活動單筆支付金額"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:textSize="18sp" />
 
         <EditText
@@ -85,6 +85,17 @@
             android:ems="10"
             android:hint="地點"
             android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/activity_maxPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="活動限制人數"
+            android:inputType="number"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/activity_textarea"

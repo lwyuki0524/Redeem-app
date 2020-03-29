@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemberActivityInfo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E3E9E9"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/firm_add_goods_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#48a9a5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/add_activity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:letterSpacing="0.1"
+                android:text="載入中..."
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!---->
+
+        <!--<ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/pic_coffee" />-->
+        <ImageView
+            android:id="@+id/firm_circle_pic"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/pic_round"
+            android:elevation="6dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/firm_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="載入中..."
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:padding="35dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/get_goods_toolbar"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/activity_join_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/activity_info"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    android:textColor="#E44646"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="2dp"
+                    android:letterSpacing="0.5"
+                    android:padding="5dp"
+                    android:text="活動資訊"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnSpan="4"
+                    android:layout_below="@+id/activity_info"
+                    android:background="?android:attr/listDivider"
+                    android:elevation="4dp" />
+
+                <TextView
+                    android:id="@+id/activity_address_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider"
+                    android:padding="5dp"
+                    android:text="地點："
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider"
+                    android:layout_toRightOf="@+id/activity_address_title"
+                    android:padding="5dp"
+                    android:text="載入中..."
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/activity_content_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/activity_address_title"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:text="活動內容："
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/activity_content_title"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:text="載入中..."
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/activity_money_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/activity_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:text="獎勵金額："
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/activity_money_title"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="載入中..."
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/activity_Person_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/activity_money"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:text="活動限制人數/活動已報名人數："
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_Person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/activity_Person_title"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="載入中..."
+                    android:textSize="18dp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:padding="35dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp">
+
+            <RelativeLayout
+                android:id="@+id/bluecard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/goods_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp"
+                    android:letterSpacing="0.5"
+                    android:padding="5dp"
+                    android:text="活動商品"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <GridLayout
+                    android:id="@+id/goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/goods_title"
+                    android:columnCount="4"
+                    android:padding="10dp"
+                    android:rowCount="5">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_columnSpan="4"
+                        android:layout_marginBottom="5dp"
+                        android:background="?android:attr/listDivider"
+                        android:elevation="4dp" />
+
+                    <TextView
+                        android:id="@+id/goods_name_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="2"
+                        android:layout_column="1"
+                        android:layout_margin="5dp"
+                        android:text="商品名稱"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/goods_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="3"
+                        android:layout_column="1"
+                        android:layout_margin="5dp"
+                        android:text="載入中..."
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="2"
+                        android:layout_rowSpan="2"
+                        android:layout_column="3"
+                        android:layout_gravity="center|right"
+                        android:maxWidth="80dp"
+                        android:text="載入中..."
+                        android:textSize="18sp" />
+
+
+                    <ImageView
+                        android:id="@+id/goods_pic"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_row="1"
+                        android:layout_rowSpan="3"
+                        android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/pic_coffee" />
+
+                    <TextView
+                        android:id="@+id/nodata"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_row="2"
+                        android:layout_column="0"
+                        android:layout_columnSpan="4"
+                        android:layout_margin="5dp"
+                        android:text="無商品"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+                </GridLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/registered_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/next_btn"
+            android:minHeight="0dp"
+            android:text="報名活動"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

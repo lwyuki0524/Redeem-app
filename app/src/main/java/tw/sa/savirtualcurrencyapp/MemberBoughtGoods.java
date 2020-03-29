@@ -43,7 +43,7 @@ public class MemberBoughtGoods extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MemberBoughtGoods.this, MemberMainActivity.class));
+//                startActivity(new Intent(MemberBoughtGoods.this, MemberMainActivity.class));
                 finish();//刪除此activity(可刪除)
             }
         });

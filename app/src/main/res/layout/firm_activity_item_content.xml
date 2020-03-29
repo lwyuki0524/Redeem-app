@@ -8,20 +8,22 @@
     tools:context=".FirmActivityItem"
     tools:showIn="@layout/firm_activity_item">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingTop="20dp"
-        android:paddingBottom="20dp">
+        android:paddingBottom="10dp">
 
         <TextView
+            android:id="@+id/activity_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:letterSpacing="0.3"
-            android:text="活動名稱"
+            android:text="載入中..."
             android:textColor="#cc0000"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -60,11 +62,12 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/activity_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="XXX" />　
+                android:text="載入中..." />　
         </LinearLayout>
 
         <TextView
@@ -78,13 +81,44 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/activity_content"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="10dp"
+            android:text="載入中..." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="50dp"
             android:layout_marginBottom="10dp"
-            android:text="活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊活動資訊" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="獎勵金額 :"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="$" />
+
+            <TextView
+                android:id="@+id/activity_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="10dp"
+                android:text="載入中..." />
+        </LinearLayout>
 
         <View
             android:id="@+id/divider2"
@@ -100,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -109,25 +143,121 @@
                 android:text="商品資訊:"
                 android:textStyle="bold" />
 
-            <LinearLayout
+            <RelativeLayout
+                android:id="@+id/goods_out_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:paddingLeft="50dp"
-                android:paddingRight="50dp">
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/nodata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="目前無商品"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    android:visibility="gone"/>
 
                 <ImageView
+                    android:id="@+id/goods_img"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
                     app:srcCompat="@drawable/pic_coffee" />
 
                 <TextView
+                    android:id="@+id/goods_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="商品名稱" />
-            </LinearLayout>
+                    android:layout_below="@+id/goods_img"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="載入中..."
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/goods_price_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/goods_name"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toRightOf="@id/goods_stock"
+                    android:text="金額:"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dollars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/goods_name"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toRightOf="@id/goods_price_title"
+                    android:text="$"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/goods_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/goods_name"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toRightOf="@+id/dollars"
+                    android:text="載入中..."
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/goods_stock_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/goods_name"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="庫存:"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/goods_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/goods_name"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toRightOf="@+id/goods_stock_title"
+                    android:text="載入中..."
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
 
         </LinearLayout>
 
@@ -144,11 +274,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
-                android:text="已參加人數:"
+                android:text="活動限制人數/已參加人數:"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/maxPeople"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/joinPeople"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="30"
@@ -172,6 +318,7 @@
             android:paddingBottom="10dp">
 
             <Button
+                android:id="@+id/backToActivityList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
@@ -181,6 +328,7 @@
                 android:textColor="@android:color/white" />
 
             <Button
+                android:id="@+id/choose_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
